@@ -1,6 +1,7 @@
 "use client"
 import {useState} from "react"
 import {useRouter} from "next/navigation"
+import { API_URL } from "@/lib/api"
 
 export default function CreateUserPage() {
     const router = useRouter()
@@ -48,7 +49,7 @@ export default function CreateUserPage() {
             age: Number(age),
             gender: Number(gender),
         }
-        const response = await fetch("http://localhost:8000/users", {
+        const response = await fetch(`${API_URL}/users`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -74,7 +75,7 @@ export default function CreateUserPage() {
             gender: Number(form.gender),
         }
 
-        const response = await fetch("http://localhost:8000/users", {
+        const response = await fetch(`${API_URL}/users`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -93,7 +94,7 @@ export default function CreateUserPage() {
         }
         const formData = new FormData()
         formData.append("file", image)
-        const response = await fetch("http://localhost:8000/upload", {
+        const response = await fetch(`${API_URL}/upload`, {
             method: "POST",
             body: formData
         })

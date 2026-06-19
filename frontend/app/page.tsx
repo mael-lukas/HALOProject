@@ -1,5 +1,6 @@
 "use client"
 import { useEffect, useState } from "react"
+import { API_URL } from "@/lib/api"
 
 export default function Home() {
   const [users, setUsers] = useState([])
@@ -8,7 +9,7 @@ export default function Home() {
   const [maxAge, setMaxAge] = useState("")
 
   async function loadUsers() {
-    let url = "http://localhost:8000/users"
+    let url = `${API_URL}/users`
     const params = new URLSearchParams()
     if (genderFilter !== "") {
       params.append("gender", genderFilter)
@@ -36,7 +37,7 @@ export default function Home() {
     if (!confirmed) {
       return
     }
-    const response = await fetch(`http://localhost:8000/users/${userId}`,
+    const response = await fetch(`${API_URL}/users/${userId}`,
       {
         method: "DELETE"
       }
