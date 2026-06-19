@@ -1,0 +1,12 @@
+- vraie page d'accueil HALO Project
+- bouton register/login -> page register/login
+- une fois login hub utilisateur avec pour l'instant bah rien, ou a la limite
+une liste des autres utilisateurs pour pouvoir leur parler
+- login admin admin pour voir les users mais aussi les delete par exe
+- admin dans le jeu peut voir toutes les cartes de bingo et manage le jeu
+
+- bon bah apparemment à la place on fait le register de "manager" a savoir
+juste la personne qui sait faire
+- register les beacons des endroits
+- interroger une ia pour faire un matching
+- donc ca veut dire qu'il me faut une fausse localisation ?
